@@ -123,9 +123,9 @@ namespace VRTK
 
         [Header("Target Interactions", order = 2)]
         [Tooltip("Object will be highlighted if a pointer selects it if this is checked.")]
-        public bool HighlightOnTarget = false;
+        public bool highlightOnTarget = false;
         [Tooltip("The material to use for highlighting on targetting.")]
-        public Material HighlightOnTargetMaterial;
+        public Material highlightOnTargetMaterial;
 
         [Header("Grab Interactions", order = 3)]
 
