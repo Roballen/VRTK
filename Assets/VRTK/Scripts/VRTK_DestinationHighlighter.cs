@@ -22,7 +22,6 @@ namespace VRTK
         }
         private void OnDestinationMarkerEnter(object sender, DestinationMarkerEventArgs e)
         {
-            //base.OnDestinationMarkerEnter(e);
             var io = e.target.GetComponent<VRTK_InteractableObject>();
             if (lastHighlightedObject == null && io != null && io.highlightOnTarget)
             {
