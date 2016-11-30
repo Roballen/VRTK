@@ -36,16 +36,6 @@
         /// </summary>
         public UnityObjectEvent OnUnuse;
 
-        /// <summary>
-        /// Emits the InteractableObjectTargetted class event
-        /// </summary>
-        public UnityObjectEvent OnTarget;
-
-        /// <summary>
-        /// Emits the InteractableObjectUnTargetted class event
-        /// </summary>
-        public UnityObjectEvent OnUnTarget;
-
         private void SetInteractableObject()
         {
             if (io == null)
@@ -69,8 +59,6 @@
             io.InteractableObjectUngrabbed += UnGrab;
             io.InteractableObjectUsed += Use;
             io.InteractableObjectUnused += Unuse;
-            io.InteractableObjectTargetted += Target;
-            io.InteractableObjectUnTargetted += UnTarget;
         }
 
         private void Touch(object o, InteractableObjectEventArgs e)
@@ -103,16 +91,6 @@
             OnUnuse.Invoke(o, e);
         }
 
-        private void Target(object o, InteractableObjectEventArgs e)
-        {
-            OnTarget.Invoke(o, e);
-        }
-
-        private void UnTarget(object o, InteractableObjectEventArgs e)
-        {
-            OnUnTarget.Invoke(o, e);
-        }
-
         private void OnDisable()
         {
             if (io == null)
@@ -126,8 +104,6 @@
             io.InteractableObjectUngrabbed -= UnGrab;
             io.InteractableObjectUsed -= Use;
             io.InteractableObjectUnused -= Unuse;
-            io.InteractableObjectTargetted -= Target;
-            io.InteractableObjectUnTargetted -= UnTarget;
         }
     }
 }

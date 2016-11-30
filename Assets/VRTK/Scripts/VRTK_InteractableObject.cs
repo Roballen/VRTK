@@ -216,16 +216,6 @@ namespace VRTK
         public event InteractableObjectEventHandler InteractableObjectUnused;
 
         /// <summary>
-        /// Emitted when a pointer selects this item
-        /// </summary>
-        public event InteractableObjectEventHandler InteractableObjectTargetted;
-
-        /// <summary>
-        /// Emitted when a pointer unselects this item
-        /// </summary>
-        public event InteractableObjectEventHandler InteractableObjectUnTargetted;
-
-        /// <summary>
         /// The current using state of the object. `0` not being used, `1` being used.
         /// </summary>
         [HideInInspector]
@@ -299,14 +289,6 @@ namespace VRTK
             if (InteractableObjectUnused != null)
             {
                 InteractableObjectUnused(this, e);
-            }
-        }
-
-        public virtual void OnInteractibleObjectTargetted(InteractableObjectEventArgs e)
-        {
-            if (InteractableObjectTargetted != null)
-            {
-                InteractableObjectTargetted(this, e);
             }
         }
 
